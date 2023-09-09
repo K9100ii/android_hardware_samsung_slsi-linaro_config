@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 #
 
 TARGET_LINUX_KERNEL_VERSION := 4.14
-
-include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
 
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -84,3 +82,5 @@ BOARD_LIBACRYL_DEFAULT_SCALER := mscl_3830
 
 # MobiCore namespace
 PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/tee/kinibi500
+
+include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk

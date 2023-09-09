@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 #
 
 TARGET_LINUX_KERNEL_VERSION := 4.4
-
-include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
 
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -75,3 +73,5 @@ BOARD_LIBACRYL_DEFAULT_COMPOSITOR := fimg2d_9810
 BOARD_LIBACRYL_DEFAULT_SCALER := mscl_9810
 BOARD_LIBACRYL_DEFAULT_BLTER := fimg2d_9810_blter
 BOARD_LIBACRYL_G2D9810_HDR_PLUGIN := libacryl_plugin_slsi_hdr10
+
+include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk

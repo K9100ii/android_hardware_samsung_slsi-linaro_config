@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 #
 
 TARGET_LINUX_KERNEL_VERSION := 4.4
-
-include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
 
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -61,3 +59,5 @@ TARGET_USES_UNIVERSAL_LIBHWJPEG := true
 
 # Acryl
 BOARD_LIBACRYL_DEFAULT_COMPOSITOR := fimg2d_8895
+
+include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk

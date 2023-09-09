@@ -18,3 +18,25 @@ TARGET_BOARD_KERNEL_HEADERS := hardware/samsung_slsi-linaro/exynos/kernel-$(TARG
 TARGET_SLSI_VARIANT := linaro
 TARGET_SOC_NAME := exynos
 BOARD_USES_DT := true
+
+# Acryl
+ifneq ($(BOARD_LIBACRYL_DEFAULT_COMPOSITOR),)
+$(call soong_config_set,libacryl,default_compositor,$(BOARD_LIBACRYL_DEFAULT_COMPOSITOR))
+endif
+ifneq ($(BOARD_LIBACRYL_DEFAULT_SCALER),)
+$(call soong_config_set,libacryl,default_scaler,$(BOARD_LIBACRYL_DEFAULT_SCALER))
+endif
+ifneq ($(BOARD_LIBACRYL_DEFAULT_BLTER),)
+$(call soong_config_set,libacryl,default_blter,$(BOARD_LIBACRYL_DEFAULT_BLTER))
+endif
+ifneq ($(BOARD_LIBACRYL_G2D9810_HDR_PLUGIN),)
+$(call soong_config_set,libacryl,g2d9810_hdr_plugin,$(BOARD_LIBACRYL_G2D9810_HDR_PLUGIN))
+endif
+
+# exynosgraphicbuffer
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),3)
+$(call soong_config_set,exynosgraphicbuffer,gralloc_version,three)
+endif
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
+$(call soong_config_set,exynosgraphicbuffer,gralloc_version,four)
+endif
