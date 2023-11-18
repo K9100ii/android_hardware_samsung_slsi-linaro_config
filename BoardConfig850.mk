@@ -66,5 +66,4 @@ BOARD_HWJPEG_ANDROID_VERSION := 12
 # Acryl
 BOARD_LIBACRYL_DEFAULT_SCALER := mscl_3830
 
-# MobiCore namespace
-PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/tee/kinibi500
+include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
