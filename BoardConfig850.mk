@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-TARGET_LINUX_KERNEL_VERSION := 4.14
-
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
 
 USE_OPENGL_RENDERER := true
